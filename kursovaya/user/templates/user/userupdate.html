@@ -1,0 +1,23 @@
+{% extends 'main/index.html' %}
+{% load static %}
+{% block title %}
+Register
+{% endblock %}
+{% block content %}
+<div class="alert alert-light" id = "register">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h2 align="center" style="font-color:black;">Change info</h2>
+
+        <input type="text" value="{{ user.username }}" class="form-control" name="username"><br>
+        <input type="password" value="{{ user.password }}" class="form-control" name="password"><br>
+        <input type="email" value="{{ user.email }}" class="form-control" name="email"><br>
+        <input type="file" name="avatar"><br>
+        {% if mistakes %}
+            <p style="color:red;">{{ mistakes }}</p>
+        {% endif %}
+<!--        <p>If you are already registrated please <a href="{% url 'login' %}">Log in</a></p>-->
+        <div align="center"><input type="submit" class="btn btn-success" value="Send changes" style="font-size:1.5vw; align:center;"></div>
+    </form>
+</div>
+{% endblock %}

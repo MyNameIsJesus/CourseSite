@@ -1,0 +1,45 @@
+{% extends 'main/index.html' %}
+{% load static %}
+{% block title%}
+{% endblock %}
+{% block content%}
+    <div class="sharp-back">
+        <h1 class="forum-title" align="center">Forum page on Python</h1><br>
+        {% if not articles and not discuss %}
+            <h1>No articles there </h1>
+        {% endif %}
+        {% if search in articles.title %}
+            <h3 class="articles-head">Articles</h3>
+        {% endif %}
+            {% for i in articles %}
+                {% if w in i.title %}
+                    <div class="post-lang">
+                        <a class="article-form" href="{% url 'Article' i.id %}">
+                            <div class="alert alert-warning">
+                                <h2>{{ i.title }}</h2>
+                                <p>{{ i.announce }}</p>
+                                <p>Made by {{ i.author }}</p>
+                                <i>{{ i.date }}</i>
+                            </div>
+                        </a>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% if discuss %}
+            <h3 class="articles-head">Questions</h3>
+        {% endif %}
+            {% for i in discuss %}
+                {% if word in i.question %}
+                    <div class = post-lang>
+                        <a class="article-form" href="{% url 'discuss' i.id %}">
+                            <div class="alert alert-info">
+                                <h2>{{ i.question}}</h2>
+                                <i>{{ i.author }}</i><br>
+                                <i>{{ i.date }}</i>
+                            </div>
+                        </a>
+                    </div>
+                {% endif %}
+            {% endfor %}
+    </div>
+{% endblock %}

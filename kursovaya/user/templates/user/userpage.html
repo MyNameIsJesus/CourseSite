@@ -1,0 +1,24 @@
+{% extends 'main/index.html' %}
+{% load static %}
+{% load thumbnail %}
+{% block title %}
+{{ user.username }}
+{% endblock %}
+{% block content %}
+    <div class="alert alert-dark" id  = "user-layout">
+        <div class="change-button">
+             <a href="{% url 'update' user.pk %}" class="btn btn-dark"><i class="bi bi-gear-fill"></i></a>
+        </div>
+        <div class="user-info">
+            <div class="img-border">
+                <img src = "{{ user.userprofile.avatar.url }}" class="ava">
+            </div>
+            <h2 align="center"><b>{{ user.username }}</b></h2>
+            <p align="center"> Rating: {{ user.userprofile.rating }}</p>
+        </div>
+        <br>
+        <div class="reg">
+            <p align="left"><i>Registration date: {{ user.date_joined }}</i></p>
+        </div>
+    </div>>
+{% endblock %}

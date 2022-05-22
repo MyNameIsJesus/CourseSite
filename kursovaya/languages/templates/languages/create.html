@@ -1,0 +1,25 @@
+{% extends 'main/index.html' %}
+{% block title %}
+Create article
+{% endblock %}
+
+{% block content %}
+<script type="text/javascript">
+    var s = document.getElementById('author');
+    s.value = {{ user.username }};
+</script>
+<div class="alert alert-info">
+    <h4>Create article</h4>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.title }}<br>
+        {{ form.announce }}<br>
+        {{ form.full_text }}<br>
+        {{ form.author }}<br>
+        {{ form.language }}<br><br>
+        <i>{{ form.date }}</i><br>
+        <p>{{ error }}</p>
+        <button class="btn btn-success" type="submit" name="article-post">Add Article</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'main/index.html' %}
+{% block title %}
+Ask your questions
+{% endblock %}
+{% block content %}
+<script type="text/javascript">
+    var s = document.getElementById('author1');
+    s.value = {{ user.username }};
+</script>
+<div class="alert alert-info">
+    <h4>Ask question</h4>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.title }}<br>
+        {{ form.question }}<br>
+        {{ form.language }}<br>
+        {{ form.author }}<br>
+        <i>{{ form.date }}</i><br>
+        <button class="btn btn-success" type="submit" name="create-discuss">Add Article</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,274 @@
+body{
+    background: url(../img/background.jpg) no-repeat center center fixed;
+    background-size:cover;
+}
+nav{
+    height:7vh;
+}
+
+main{
+   margin-top:8vh;
+
+}
+ul.navbar-nav{
+    padding-right:25vw;
+}
+
+li{
+    padding-right:0.5vw;
+}
+form{
+    margin:2vw;
+}
+
+a.media{
+    text-decoration:none;
+    color:white;
+    font-size: 3.5vh;
+    padding-right:1vw;
+}
+
+.main-announce{
+    width:50vw;
+    border: 4px rgba(227, 221, 220, 0.3) solid;
+    margin-left:25vw;
+    padding:2vw;
+    background-color:rgba(174, 203, 230, 0.65);
+
+}
+
+.main-announce p{
+    color:white;
+    -webkit-text-stroke: 0.8px black;
+    font-size:1.9vw;
+}
+td{
+    margin: 15%;
+    height:15vh;
+}
+
+div.content, div.content-img{
+    display:inline-block;
+}
+
+div.content{
+    padding-left:1vw;
+    width:18vw;
+    height:35vh;
+}
+
+div.content-img img{
+    float:left;
+}
+
+a.language-nav{
+    color:inherit;
+}
+
+.alert alert-secondary{
+    height:20vh;
+}
+table{
+    margin-top:3vh;
+    margin-left:4vw;
+    margin-right:4vw;
+}
+
+td, a.article-form{
+    transition: .4s ease-in-out;
+}
+
+td:hover, a.article-form:hover{
+    transform: scale(1.05);
+    opacity:0.65;
+}
+main{
+    overflow:hidden;
+}
+
+div.heading{
+    width:30vw;
+    padding: 5%;
+    border-bottom: 2px rgba(60, 61, 60, 0.3) solid;
+}
+
+.post-lang{
+    padding-top:1vh;
+    width:35vw;
+    margin-bottom:1%;
+    margin-left:32vw;
+    text-align:center;
+}
+
+a.article-form:hover{
+    text-decoration:none;
+    border: 10px solid;
+}
+
+a.article-form div:hover{
+    border: 2px solid;
+    opacity:0.6;
+}
+
+h1.forum-title{
+    color:rgb(167, 17, 209);
+    font-family: 'Permanent Marker', cursive;
+    -webkit-text-stroke: 2px black;
+}
+
+h3.articles-head{
+    border-bottom: 0.25px solid rgba(145, 144, 144, 0.5);
+    margin-left:30vw;
+    width:40vw;
+    color: white;
+    -webkit-text-stroke: 0.6px black;
+}
+
+#choose{
+    margin-top:10vh;
+}
+
+#choose h2{
+    color:black;
+    text-align:center;
+}
+
+.buttons{
+    text-align:center;
+}
+
+#register, #choose, #login{
+    margin-top:10vh;
+    border-bottom: 0.25px solid rgba(145, 144, 144, 0.5);
+    margin-left:30vw;
+    width:40vw;
+}
+
+#article{
+    padding-left:2vw;
+    padding-right:2vw;
+}
+
+#article-comment{
+    padding-left:5vw;
+    padding-right:5vw;
+
+}
+
+#comment-send {
+    margin-left:-0.1vw;
+}
+
+.media{
+    float:left;
+    display:inline-block;
+    margin:right:1vw;
+}
+
+.hidden-nav{
+    opacity:0;
+}
+
+.display{
+    padding-left:20vw;
+    padding-right:20vw;
+    padding-top:3vh;
+}
+
+.ava{
+    width:100%;
+    height:100%;
+}
+
+#user-layout{
+    margin-left:20vw;
+    margin-right:20vw;
+    padding-left:10vw;
+}
+
+#user-layout a{
+    font-size:3vw;
+    margin-right:10vw;
+    border-radius:55%;
+    float:left;
+    margin-top:5vh;
+}
+
+
+.user-info{
+    display:inline-block;
+}
+
+.reg{
+    margin-left:10vw;
+}
+
+#cookie-consent {
+    text-align:center;
+    position: fixed;
+    bottom: 0px;
+    width: 100vw;
+    padding-top: 7px;
+    height: 5vw;
+    color: #fff;
+    line-height: 20px;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    font-size: 1.25vw;
+    background: #292929;
+    z-index: 120;
+    cursor: pointer;
+    border-radius: 3px
+}
+
+.allow-button {
+    height: 5vh;
+    width: 7vw;
+    color: #fff;
+    font-size: 1vw;
+    line-height: 10px;
+    border-radius: 3px;
+    border: 1px solid green;
+    background-color: green
+}
+
+.like-dislike{
+    margin-left:-2vw;
+}
+
+.img-border{
+    border-color: #2c9cb8 #1d4c8f;
+    border-image: none;
+    border-radius: 50% 50% 50% 50%;
+    border-style: solid;
+    border-width: 0.25vw;
+    height: 10vw;
+    width: 10vw;
+    overflow: hidden;
+}
+
+.comment-inside{
+    display:inline-block;
+    float:left-top;
+}
+
+.comment-inside form{
+    float:left;
+}
+
+#correct{
+    background-color: rgba(115, 217, 142,0.6);
+}
+
+#heading{
+  background: -webkit-linear-gradient(#77d9d1, #779ed9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0.05vw black;
+}
+
+#update_article{
+    margin-left:20vw;
+    margin-right:20vw;
+
+}

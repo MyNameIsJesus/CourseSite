@@ -1,0 +1,114 @@
+{% extends 'main/index.html' %}
+{% load static %}
+{% block title %}
+    Mainpage
+{% endblock %}
+{% block content %}
+    <div class = main-announce>
+        <h1 id = heading align="center" >ExceptionHelper</h1>
+        <p>Welcome to ExceptionHelper. Here you can find some useful information about programming on any language.
+        Hope you'll enjoy time spent here.</p>
+    </div>
+    <div class="main-grid">
+        <table cellspacing="" cellpadding="10">
+            <tr>
+                <td>
+                    <a href="{% url 'Python' %}" class="language-nav">
+                        <div class="alert alert-secondary">
+                            <div class="content-img">
+                                <img src="{% static 'img/python.png' %}" width="150" height="150">
+                            </div>
+                            <div class="content">
+                                <h4>Python</h4>
+                                <p>Python is an interpreted, object-oriented, high-level programming language with dynamic
+                                        semantics. Its high-level built in data structures, combined with dynamic typing and
+                                        dynamic binding, make it very attractive for Rapid Application Development</p>
+                            </div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="{% url 'C#' %}" class="language-nav">
+                    <div class="alert alert-secondary">
+                        <div class="content-img">
+                            <img src="{% static 'img/c#.png' %}" width="150" height="150">
+                        </div>
+                        <div class="content">
+                            <h4>C#</h4>
+                            <p>C# is an object-oriented, component-oriented programming language.
+                                    C# provides language constructs to directly support these concepts, making C# a
+                                    natural language in which to create and use software components. Since its origin,
+                                    C# has added features to support new workloads
+                            </p>
+                        </div>
+                    </div>
+                    </a>
+                </td>
+                 <td>
+                     <a href="{% url 'C++' %}" class="language-nav">
+                        <div class="alert alert-secondary">
+                            <div class="content-img">
+                                <img src="{% static 'img/c++.png' %}" width="150" height="150">
+                            </div>
+                            <div class ="content">
+                                <h4>C++</h4>
+                                <p>C++ is a cross-platform language that can be used to create high-performance applications.
+                                        C++ was developed by Bjarne Stroustrup, as an extension to the C language.
+                                        C++ gives programmers a high level of control over system resources and memory.</p>
+                            </div>
+                        </div >
+                     </a>
+                </td>
+                </tr>
+                <tr>
+                 <td>
+                     <a href="{% url 'Java' %}" class="language-nav">
+                        <div class="alert alert-secondary">
+                                <div class="content-img">
+                                    <img src="{% static 'img/java.jpg' %}" width="150" height="150">
+                                </div>
+                                <div class="content">
+                                <h4>Java</h4>
+                                    <p>Java is a programming language and computing platform first released by Sun Microsystems in 1995.
+                                        It has evolved from humble beginnings to power a large share of today’s digital
+                                        world, by providing the reliable platform upon which many services and applications are built.</p>
+                                </div>
+                        </div>
+                     </a>
+                </td>
+                 <td>
+                     <a href="{% url 'Kotlin' %}" class="language-nav">
+                        <div class="alert alert-secondary">
+                                <div class="content-img">
+                                    <img src="{% static 'img/kotlin.png' %}" width="150" height="150">
+                                </div>
+                                <div class="content">
+                                    <h4>Kotlin</h4>
+                                    <p>Kotlin is a general purpose, free, open source, statically typed “pragmatic”
+                                        programming language initially designed for the JVM (Java Virtual Machine) and
+                                        Android that combines object-oriented and functional programming features.
+                                        It is focused on interoperability, safety, clarity, and tooling support.</p>
+                                </div>
+                        </div>
+                     </a>
+                </td>
+                 <td>
+                     <a href="{% url 'PHP' %}" class="language-nav">
+                        <div class="alert alert-secondary">
+                                <div class="content-img">
+                                    <img src="{% static 'img/php.png' %}" width="150" height="150">
+                                </div>
+                                <div class="content">
+                                    <h4>PHP</h4>
+                                    <p>PHP is an open-source server-side scripting language that many devs use for web
+                                        development. It is also a general-purpose language that you can use to make lots of projects,
+                                        including Graphical User Interfaces (GUIs).</p>
+                                </div>
+                        </div>
+                     </a>
+                </td>
+
+            </tr>
+        </table>
+    </div>
+{% endblock%}

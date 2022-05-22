@@ -1,0 +1,22 @@
+{% extends 'main/index.html' %}
+{% load static %}
+{% block title %}
+Register
+{% endblock %}
+{% block content %}
+<div class="alert alert-light" id = "register">
+    <form method="post">
+        {% csrf_token %}
+        <h2 align="center" style="font-color:black;">Register</h2>
+        <input type="text" name="username" class="form-control" placeholder="enter your name"><br>
+        <input type="text" name="password" class="form-control" placeholder="enter the password"><br>
+        <input type="text" name="password_check" class="form-control" placeholder="confirm password"><br>
+        <input type="text" name="email" class="form-control" placeholder="enter your mail">
+        {% if mistakes %}
+            <p style="color:red;">{{ mistakes }}</p>
+        {% endif %}
+        <p>If you are already registrated please <a href="{% url 'login' %}">Log in</a></p>
+        <div align="center"><input type="submit" class="btn btn-success" value="Register" style="font-size:1.5vw; align:center;" name="register"></div>
+    </form>
+</div>
+{% endblock %}

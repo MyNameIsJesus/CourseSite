@@ -1,0 +1,14 @@
+{% extends 'main/index.html' %}
+{% load static %}
+{% block title %}
+Delete {{ article.title }}
+{% endblock %}
+{% block content %}
+<div class="alert alert-light" align="center" style="margin-left:40vw; margin-right:40vw; margin-top:20vh; height:10vw;">
+    <form method="post">
+        {% csrf_token %}
+        <h4>Delete article?</h4>
+        <button type="submit" class="btn btn-danger">Delete</button>
+    </form>
+</div>
+{% endblock %}

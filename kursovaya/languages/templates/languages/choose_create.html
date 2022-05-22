@@ -1,0 +1,16 @@
+{% extends 'main/index.html' %}
+{% block title %}
+Choose the type of post
+{% endblock %}
+{% block content %}
+<div class="alert alert-light" id="choose">
+    <h2>Choose what type of post you want to create </h2>
+    <div class="buttons">
+        <div class="inline-block">
+            <a href="{% url 'create_article' %}" class="btn btn-primary">Article</a>
+            <a href="{% url 'create_discuss' %}" class="btn btn-warning">Ask question</a>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

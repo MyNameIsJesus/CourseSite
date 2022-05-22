@@ -1,0 +1,27 @@
+{% extends 'main/index.html' %}
+{% block title %}
+Create article
+{% endblock %}
+
+{% block content %}
+<script type="text/javascript">
+    var s = document.getElementById('author');
+    s.value = {{ user.username }};
+</script>
+<div id="update_article">
+    <div class="alert alert-info">
+        <h4 align="center">Edit article</h4>
+        <form method="post">
+            {% csrf_token %}
+            <b>Title </b><br>
+            <input type="text" name="new_title" value="{{ obj.title }}" class="form-control"><br><br>
+            <b>Announce </b><br>
+            <input type="text" name="new_announce" value ="{{ obj.announce }}" class="form-control"><br><br>
+            <b>Full text </b><br>
+            <textarea name="new_text" class="form-control">{{ obj.full_text }}</textarea><br>
+            <p>{{ error }}</p>
+            <input class="btn btn-success" type="submit" name="update-article" value="Edit Article">
+        </form>
+    </div>
+</div>
+{% endblock %}

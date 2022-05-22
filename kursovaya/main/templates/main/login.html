@@ -1,0 +1,18 @@
+{% extends 'main/index.html' %}
+{% block title %}
+Login
+{% endblock %}
+{% block content %}
+<div class="alert alert-primary" id="login">
+    <form method="post">
+        {% csrf_token %}
+        <h2 align="center" style="font-color:black;">Login</h2>
+        <input type="text" class="form-control" name="log_username" placeholder="Username"><br>
+        <input type="password" class="form-control" name="log_password" placeholder="password"><br>
+        <div align="center"><input type="submit" class="btn btn-success" value="Login" name="login"></div>
+        {% if mistakes %}
+            <p style="color:red;"> {{ mistakes }}</p>
+        {% endif %}
+    </form>
+</div>
+{% endblock %}
